@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>InnoClash 2025 | Innovation Competition</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            background-color: #061227;
+            font-family: sans-serif;
+        }
+
+        @font-face {
+            font-family: myFont;
+            src: url(meqanor-font/meqanor.otf);
+        }
+
+        .nav {
+            background-color: #669bbc; 
+            overflow: hidden;
+            max-height: 6rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 2160px;
+            justify-content: space-between;
+        }
+
+        .title-cont {
+            font-size: 3rem;
+            font-family: myFont;
+            color: wheat;
+            padding: 1rem;
+        }
+
+        .nav-cont {
+            float: right;
+            text-align: right;
+            padding: 15px 12px;
+            font-size: 1rem;
+        }
+
+        .nav-cont a {
+            color: black;
+            text-decoration: none;
+            padding: 12px;
+            transition: 0.3s ease;
+        }
+
+        .nav-cont a:hover{
+            color: whitesmoke;
+        }
+
+
+        .big{
+            color: white;
+            padding-top: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 3rem;
+            line-height: 0.2;
+            margin: auto;
+            text-align: center;
+        }
+
+        .big h1 {
+            font-size: 5rem;
+            color: wheat;
+        }
+
+        .big p {
+            font-size: 2rem;
+        }
+
+        .cat-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .cat-cards {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.6rem 2.2rem;
+            box-shadow: 0 3px 30px -10px white;
+            flex: 1;
+            min-width: 240px;
+            backdrop-filter: blur(2px);
+            transition: transform 0.2s ease;
+        }
+
+        .cat-cards:hover{
+            transform: translateY(-4px);
+        }
+
+        .cat {
+            text-align: center;
+            background: rgb(147, 217, 244);
+            padding: .3rem;
+            border-radius: 2rem;
+            border: 1px solid black;
+            box-shadow: 0 3px 25px -10px black;
+            min-width: 250px;
+        }
+
+        .sya {
+            font-size: 20px;
+        }
+
+        ul {
+            display: grid;
+            gap: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            color:white;
+            border-top: 1px solid wheat;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="title-cont">
+            <p>💡InnoClash</p>
+        </div>
+        <div class="nav-cont">
+            <i class="fas fa-home"></i><a class="active" href="index.html">HOME</a>
+            <i class="fas fa-list"></i><a href="category.html">CATEGORY</a>
+            <i class="fas fa-pen-to-square"></i><a href="signup.html">SIGNUP</a>
+        </div>
+    </div>
+    <div class="big">
+        <h1>CATEGORIES</h1>
+        <p>in the competition</p>
+    </div>
+    <div class="cat-row">
+        <div class="cat-cards">
+            <div class="cat">
+                <h1>CATEGORY A</h1>
+                <h2>Students Innovators</h2>
+            </div>
+            <div class="sya">
+                <h3>Eligibility Requirements:</h3>
+                <ul>
+                    <li>Must be currently enrolled in a recognized school, college, or university</li>
+                    <li>Max 5 members per team</li>
+                    <li>Must present an original innovation (product, service, or system)</li>
+                    <li>Idea can be at concept, prototype, or early development stage</li>
+                    <li>Must address a real-world problem (e.g., sustainability, education, health, tech)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cat-cards">
+            <div class="cat">
+                <h1>CATEGORY B</h1>
+                <h2>Open / Professional Innovators</h2>
+            </div>
+            <div class="sya">
+                <h3>Eligibility Requirements:</h3>
+                <ul>
+                    <li>Open to individuals, startups, researchers, or companies</li>
+                    <li>No age or academic restrictions</li>
+                    <li>Teams allowed (max 7 members)</li>
+                    <li>Must present a functional prototype, product, or validated concept</li>
+                    <li>Should demonstrate market potential or real-world application</li>
+                    <li>Preferably includes testing, user validation, or pilot results</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h6>100% dibuat sendiri. Laman web ini hanyalah untuk tujuan kursus asas pembangunan web.</h6>
+    </div>
+</body>
+</html>
