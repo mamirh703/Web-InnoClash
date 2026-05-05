@@ -23,25 +23,28 @@
         .nav {
             background-color: #669bbc; 
             overflow: hidden;
-            max-height: 6rem;
             display: flex;
             align-items: center;
-            gap: 3rem;
-            max-width: 2160px;
+            gap: 1rem;
             justify-content: space-between;
+            flex-wrap: wrap;
+            border-radius: 1rem;
+            max-height: 300px;
+            padding:1rem;
         }
 
         .title-cont {
             font-size: 3rem;
             font-family: myFont;
             color: wheat;
-            padding: 1rem;
+        }
+
+        .title-cont i{
+            color: rgb(255, 191, 0);
         }
 
         .nav-cont {
-            float: right;
             text-align: right;
-            padding: 15px 12px;
             font-size: 1rem;
         }
 
@@ -54,6 +57,14 @@
 
         .nav-cont a:hover{
             color: whitesmoke;
+        }
+
+        @media (max-width: 750px){
+            .nav{
+                flex-direction: column;
+                text-align: center;
+            }
+
         }
 
         .title {
@@ -114,7 +125,7 @@
 <body>
     <div class="nav">
         <div class="title-cont">
-            <p>💡InnoClash</p>
+            <i class="fas fa-lightbulb"></i> InnoClash
         </div>
         <div class="nav-cont">
             <i class="fas fa-home"></i><a class="active" href="index.html">HOME</a>
