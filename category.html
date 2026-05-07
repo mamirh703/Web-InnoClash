@@ -64,13 +64,13 @@
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             padding: 3rem;
-            line-height: 0.2;
             margin: auto;
             text-align: center;
+            line-height: 0.1rem;
         }
 
         .big h1 {
-            font-size:5rem;
+            font-size:4rem;
             color: wheat;
         }
 
@@ -111,8 +111,39 @@
             min-width: 250px;
         }
 
-        .sya {
-            font-size: 20px;
+        .text {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            font-size: 1.4rem;
+        }
+
+        .text.show {
+            opacity: 1;
+            max-height: fit-content;
+        }
+
+        .but-cont {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1rem;
+            justify-content: center;
+        }
+
+        .but-cont button {
+            background: white;
+            border: 2px solid #333;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .but-cont button:hover {
+            background: #333;
+            color: white;
         }
 
         ul {
@@ -159,15 +190,26 @@
                 <h1>CATEGORY A</h1>
                 <h2>Students Innovators</h2>
             </div>
-            <div class="sya">
-                <h3>Eligibility Requirements:</h3>
-                <ul>
-                    <li>Must be currently enrolled in a recognized school, college, or university</li>
-                    <li>Max 5 members per team</li>
-                    <li>Must present an original innovation (product, service, or system)</li>
-                    <li>Idea can be at concept, prototype, or early development stage</li>
-                    <li>Must address a real-world problem (e.g., sustainability, education, health, tech)</li>
-                </ul>
+            <div class="but-cont">
+                <button onclick="toggleText('reqa')">Requirement</button>
+                <button onclick="toggleText('hada')">Prizes</button>
+            </div>
+            <div class="content">
+                <div id="reqa" class="text">
+                    <h3>Eligibility Requirements:</h3>
+                    <ul>
+                        <li>Must be currently enrolled in a recognized school, college, or university</li>
+                        <li>Max 5 members per team</li>
+                        <li>Must present an original innovation (product, service, or system)</li>
+                        <li>Idea can be at concept, prototype, or early development stage</li>
+                        <li>Must address a real-world problem (e.g., sustainability, education, health, tech)</li>
+                    </ul>
+                </div>
+                <div id="hada" class="text">
+                    <p>First Place: RM800</p>
+                    <p>Second Place: RM500</p>
+                    <p>Third Place: RM300</p>
+                </div>
             </div>
         </div>
         <div class="cat-cards">
@@ -175,21 +217,42 @@
                 <h1>CATEGORY B</h1>
                 <h2>Open / Professional Innovators</h2>
             </div>
-            <div class="sya">
-                <h3>Eligibility Requirements:</h3>
-                <ul>
-                    <li>Open to individuals, startups, researchers, or companies</li>
-                    <li>No age or academic restrictions</li>
-                    <li>Teams allowed (max 7 members)</li>
-                    <li>Must present a functional prototype, product, or validated concept</li>
-                    <li>Should demonstrate market potential or real-world application</li>
-                    <li>Preferably includes testing, user validation, or pilot results</li>
-                </ul>
+            <div class="but-cont">
+                <button onclick="toggleText('reqb')">Requirement</button>
+                <button onclick="toggleText('hadb')">Prizes</button>
+            </div>
+            <div class="content">
+                <div id="reqb" class="text">
+                    <h3>Eligibility Requirements:</h3>
+                    <ul>
+                        <li>Open to individuals, startups, researchers, or companies</li>
+                        <li>No age or academic restrictions</li>
+                        <li>Teams allowed (max 7 members)</li>
+                        <li>Must present a functional prototype, product, or validated concept</li>
+                        <li>Should demonstrate market potential or real-world application</li>
+                        <li>Preferably includes testing, user validation, or pilot results</li>
+                    </ul>
+                </div>
+                <div id="hadb" class="text">
+                    <p>First Place: RM1300</p>
+                    <p>Second Place: RM1000</p>
+                    <p>Third Place: RM800</p>
+                </div>
             </div>
         </div>
     </div>
     <div class="footer">
         <h6>100% dibuat sendiri. Laman web ini hanyalah untuk tujuan kursus asas pembangunan web.</h6>
     </div>
+
+    <script>
+        function toggleText(id) {
+            document.querySelectorAll(".text").forEach(el => {
+                el.classList.remove("show");
+            });
+
+            document.getElementById(id).classList.add("show");
+        }
+    </script>
 </body>
 </html>
